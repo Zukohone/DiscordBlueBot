@@ -90,6 +90,12 @@ The OpenJFX Monocle library can be found [here](https://drive.google.com/uc?id=1
 * Place the downloaded .jar in the ```${JAVA_HOME}/jre/lib/ext folder (for me it's``` ```/usr/lib/jvm/java-8-oracle/jre/lib/ext``` with Debian 8)
 * Run the bot with ```java -jar -Xmx512m -Dtestfx.robot=glass -Dglass.platform=Monocle -Dmonocle.platform=Headless -Dprism.order=sw BlueBot.jar cmd```
 
+## Running on Container
+* Clone this Repo
+* Open Dockerfile and subistitute the token and appID in line 11
+* Build the image ```docker build -t bluebot .``` 
+* Run Container ```docker run -d -v /PutTheAbsolutePathOfFolder/DiscordSoundBot/soundboard:/DiscordSoundBot/soundboard bluebot```
+
 ## License
 
 This project is released under the [MIT License](https://github.com/thibautbessone/DiscordBlueBot/blob/master/LICENSE).
